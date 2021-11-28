@@ -1,0 +1,68 @@
+<h1> 02: zapis/odczyt danych w bazie NEDB </h1>
+<div id="why">
+    <div id="form-container">
+        <h2>Dane pojazdu: </h2>
+        <form id="adder" name="cars" action="/addCar">
+        <table>
+            {{#each options}}
+            <tr>
+                <td><label for="{{this}}">{{this}}</label></td>
+                <td><input type="checkbox" id="{{this}}"name="{{this}}"><br/></td>
+            </tr>
+                
+            {{/each}}
+            <tr>
+                <td colspan="2"><input class="normie" type="submit" value="DODAJ DO BAZY"></td>
+            </tr>
+        </table>
+            
+        </form>
+    </div>
+
+    <div id="list-container">
+        <h2>wszystkie pojazdy - edycja:</h2>
+        <table>
+            <tr>
+                <th></th>
+                {{#each options}}
+                    <th>{{this}}</th>
+                {{/each}}
+                <th></th>
+                <th></th>
+            </tr>
+            {{#each docs}}
+                {{#if edited}} 
+                    <tr>
+                        <td>{{@index}}</td>
+                        <form action="/finishEdit">
+                            {{#each this}}
+                                {{{thisisbad this}}}
+                            {{/each}}
+                            {{#each ../options}}
+                                <td>
+                                    <select name="{{this}}">
+                                        <option value="TAK">TAK</option>
+                                        <option value="NIE">NIE</option>
+                                        <option value="BRAK DANYCH">BRAK DANYCH</option>
+                                    </select>
+                                </td>
+                            {{/each}}
+                            <td><input type="submit" class="update" value="UPDATE"></td>
+                            <td><button class="normie" onclick="location.href = '/'">CANCEL</button></td>
+                        </form>
+                    </tr>
+                {{else}}
+                    <tr>
+                        <td>{{@index}}</td>
+                        {{#each this}}
+                            {{{bad this}}}
+                        {{/each}}
+                    </tr>
+                {{/if}}
+                
+                
+            {{/each}}
+        </table>
+    </div>
+
+</div>

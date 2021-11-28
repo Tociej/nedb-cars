@@ -1,0 +1,16 @@
+{
+  "name": "cars",
+  "version": "1.0.0",
+  "description": "epic nedb cars",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tociej",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.5",
+    "nedb": "^1.8.0"
+  }
+}

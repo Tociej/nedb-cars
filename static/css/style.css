@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 35px;
+}
+
+h1 {
+    color: blue;
+    font-family: 'Consolas', sans-serif;
+    font-size: 45px;
+}
+
+h2 {
+    color: gray;
+    text-decoration: underline;
+
+}
+
+#why {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#why > div:first-child {
+    width: 25%;
+}
+
+#adder > label {
+    border: 1px solid black;
+    padding: 2px;
+    min-width: 70%;
+}
+
+.normie {
+    border: 2px solid blue;
+    border-radius: 5px;
+    color: blue;
+    font-family: 'Consolas', sans-serif;
+    padding: 5px;
+
+
+}
+
+.delete {
+    border: 2px solid red;
+    border-radius: 5px;
+    color: red;
+    font-family: 'Consolas', sans-serif;
+    padding: 5px; 
+}
+
+.update {
+    border: 2px solid purple;
+    border-radius: 5px;
+    color: purple;
+    font-family: 'Consolas', sans-serif;
+    padding: 5px; 
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+#adder > * {
+    margin-bottom: 15px;
+}
+
+label:hover{
+    color: blue;
+}
+
+
+
+th {
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+
+}
+
+td {
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+select {
+    color: blue;
+    font-family: 'Consolas', sans-serif;
+    border: 1px solid blue;
+}
